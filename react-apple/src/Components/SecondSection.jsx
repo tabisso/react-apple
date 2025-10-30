@@ -3,26 +3,26 @@ import React from 'react'
 function SecondSection() {
   return (
     <div>
-      <section class="second-hightlight-wrapper">
-		<div class="container">
+      <section className="second-hightlight-wrapper">
+		<div className="container">
 
-			<div class="new-alert">
+			<div className="new-alert">
 				New
 			</div>
 
-			<div class="title-wraper bold black">
+			<div className="title-wraper bold black">
 				MacBook Air 
 			</div> 
 
-			<div class="description-wrapper black">
+			<div className="description-wrapper black">
 				Twice the speed. Twice the storage.
 			</div>
 
-			<div class="price-wrapper grey">
+			<div className="price-wrapper grey">
 				From $999.
 			</div>
 
-			<div class="links-wrapper">
+			<div className="links-wrapper">
 				<ul>
 					<li><a href="">Learn more</a></li>
 					<li><a href="">Buy</a></li>
