@@ -11,8 +11,8 @@ import ThirdSection from "./Components/ThirdSection.jsx"
 import FourthSection from "./Components/FourthSection.jsx"
 import FifthSection from "./Components/FifthSection.jsx"
 import SixthSection from "./Components/SixthSection.jsx"
-import FirstSection from "./Components/FirstSection.jsx"
-import FirstSection from "./Components/FirstSection.jsx"
+import Footer from "./Components/Footer.jsx"
+
 
 
 function App() {
@@ -28,6 +28,7 @@ function App() {
     <FourthSection/>
     <FifthSection/>
     <SixthSection/>
+    <Footer/>
      </>
   )
 }
