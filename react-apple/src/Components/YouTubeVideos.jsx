@@ -5,7 +5,23 @@ function YouTubeVideos() {
 
   useEffect(() => {
 
-    //key ; AIzaSyDZ-1bTPPPP69kbGyaBjYW1d2S-CqIKfq8
+    const YOUTUBE_API_KEY = "AIzaSyAgosx6sZBllGJmhFhjEGxV15aLCZi1l9w";
+
+useEffect(() => {
+  fetch(
+    `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const youTubeVideos = data.items || [];
+      setYouTubeVideos(youTubeVideos);
+    })
+    .catch((error) => {
+      console.error("Error fetching YouTube videos:", error);
+    });
+}, []);
+
+    const 
     fetch(
       "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAgosx6sZBllGJmhFhjEGxV15aLCZi1l9w&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9"
     )
