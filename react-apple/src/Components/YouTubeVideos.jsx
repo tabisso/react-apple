@@ -3,11 +3,9 @@ import React, { useState, useEffect } from "react";
 function YouTubeVideos() {
   const [youTubeVideos, setYouTubeVideos] = useState([]);
 
-  useEffect(() => {
-
-    const YOUTUBE_API_KEY = "AIzaSyAgosx6sZBllGJmhFhjEGxV15aLCZi1l9w";
 
 useEffect(() => {
+   const YOUTUBE_API_KEY = "AIzaSyAgosx6sZBllGJmhFhjEGxV15aLCZi1l9w";
   fetch(
     `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9`
   )
@@ -21,19 +19,24 @@ useEffect(() => {
     });
 }, []);
 
-    const 
-    fetch(
-      "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAgosx6sZBllGJmhFhjEGxV15aLCZi1l9w&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        const youTubeVideos = data.items || [];
-        setYouTubeVideos(youTubeVideos);
-      })
-      .catch((error) => {
-        console.error("Error fetching YouTube videos:", error);
-      });
-  }, []); 
+
+  // useEffect(() => {
+
+  //   const YOUTUBE_API_KEY = "AIzaSyAgosx6sZBllGJmhFhjEGxV15aLCZi1l9w";
+
+  //   
+  //  const fetch(
+  //     "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAgosx6sZBllGJmhFhjEGxV15aLCZi1l9w&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9"
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       const youTubeVideos = data.items || [];
+  //       setYouTubeVideos(youTubeVideos);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching YouTube videos:", error);
+  //     });
+  // }, []); 
 
   return (
     <div className="allVideosWrapper">

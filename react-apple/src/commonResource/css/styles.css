@@ -412,9 +412,95 @@ img {
 	}	
 }
 
+/* apple video section css */
+
+/* Wrapper for the whole video section */
+.allVideosWrapper {
+  background: #fff;
+  padding: 50px 0;
+}
+
+/* Title area */
+.video-title-wrapper {
+  padding: 20px 0 40px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* Make Bootstrap columns stretch so cards can be equal height */
+.allVideosWrapper .col-sm-12,
+.allVideosWrapper .col-md-4 {
+  display: flex;
+}
+
+/* Each video card */
+.singleVideoWrapper {
+  background: #f3f2f2;
+  box-shadow: 4px 0px 13px rgba(158, 158, 158, 0.12);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Thumbnail area */
+.videoThumbnail img {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* keeps all thumbnails same shape */
+  object-fit: cover;
+  display: block;
+}
+
+/* Text area under thumbnail */
+.videoInfoWrapper {
+  padding: 10px 16px;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;               /* fill remaining space so heights match */
+}
+
+/* Video title */
+.videoTitle {
+  font-weight: 700;
+  line-height: 1.2em;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.videoTitle a {
+  color: #000;
+  text-decoration: none;
+}
+
+.videoTitle a:hover {
+  text-decoration: underline;
+}
+
+/* Video description */
+.videoDesc {
+  font-size: 0.75rem;
+  color: #676767;
+
+  /* Limit number of lines so long descriptions don’t stretch the card */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;       /* show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 
-/* Video Area */
+/* 
+
+
+
+/* 
+Video Area
+
 .youtubeVideosWrapper {
   background: #fff;
   padding: 50px;
@@ -447,4 +533,4 @@ img {
 /* .active {
   font-weight: bold;
   color: #0071e3 !important;
-} */
+} */ 
